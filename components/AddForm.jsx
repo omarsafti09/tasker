@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const AddForm = () => {
   const [task, setTask] = useState("");
+  const [category, setCategory] = useState("");
   const [recurrent, setRecurrent] = useState(false);
   const handleChange = () => {
     setRecurrent(!recurrent);
@@ -22,6 +23,13 @@ const AddForm = () => {
           className="h-8 mb-4 text-black font-bold pl-2 rounded"
           value={task}
           onChange={(e) => setTask(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Category..."
+          className="h-8 mb-4 text-black font-bold pl-2 rounded"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
         />
         <div className="flex">
           <input
