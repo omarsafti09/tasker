@@ -1,11 +1,9 @@
 import "@/assets/styles/globals.css";
-import NavBar from "@/components/NavBar";
 
 const layout = ({ children }) => {
   return (
     <html>
-      <body>
-        <NavBar />
+      <body className="bg-black">
         <main>{children}</main>
       </body>
     </html>

@@ -1,10 +1,13 @@
-import TaskGroup from "@/components/TaskGroup";
-import React from "react";
+"use client";
+import Tasks from "@/components/Tasks";
+import { useState } from "react";
 
 const page = () => {
+  const [Categories, setCategories] = useState([]);
+
   return (
     <div>
-      <TaskGroup cat={"Recurring"} label={["shit", "hello", "a", "b"]} />
+      <Tasks Categories={Categories} />
     </div>
   );
 };
