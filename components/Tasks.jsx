@@ -1,4 +1,3 @@
-import React from "react";
 import TaskGroup from "./TaskGroup";
 
 const Tasks = ({ Categories }) => {
