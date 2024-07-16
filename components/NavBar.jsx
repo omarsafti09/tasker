@@ -19,7 +19,7 @@ const NavBar = () => {
         </span>
         <div className="w-full md:w-3/4 hidden md:flex justify-center md:justify-around">
           <NavLink path={"/"} name={"Home"} />
-          <NavLink path={"/add"} name={"Add"} />
+          <NavLink path={"/api/add"} name={"Add"} />
         </div>
       </nav>
     );

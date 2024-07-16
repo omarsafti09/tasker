@@ -1,14 +1,13 @@
 "use client";
-import Calendar from "@/components/Calendar";
-import Tasks from "@/components/Tasks";
+import CalendarView from "@/components/CalendarView";
 import { useState } from "react";
 
 const page = () => {
-  const [Categories, setCategories] = useState([]);
+  const [date, setDate] = useState();
 
   return (
     <div>
-      <Calendar />
+      <CalendarView />
     </div>
   );
 };

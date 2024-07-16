@@ -25,7 +25,7 @@ const TaskGroup = ({ Category, labels }) => {
         </div>
         <div className="bg-gray-600 text-white flex flex-col text-4xl font-bold">
           {labels.map((label) => (
-            <TaskToDo label={label} />
+            <TaskToDo key={label} label={label} />
           ))}
         </div>
       </div>

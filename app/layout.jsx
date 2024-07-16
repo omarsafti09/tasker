@@ -4,11 +4,9 @@ import NavBar from "@/components/NavBar";
 const layout = ({ children }) => {
   return (
     <html>
-      <body className="bg-black">
+      <body className="bg-cyan-800">
         <NavBar />
-        <main className="flex justify-center items-center h-96">
-          {children}
-        </main>
+        <main className="p-16">{children}</main>
       </body>
     </html>
   );
