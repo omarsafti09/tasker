@@ -7,7 +7,7 @@ import "react-calendar/dist/Calendar.css";
 const CalendarView = () => {
   const [date, setDate] = useState(new Date());
   const [formattedDate, setFormattedDate] = useState(
-    `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
+    `${date.getFullYear()}-0${date.getMonth() + 1}-${date.getDate()}`
   );
 
   return (

@@ -1,17 +1,15 @@
 "use client";
 import React from "react";
 import { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 const AddForm = () => {
   const [task, setTask] = useState("");
   const [category, setCategory] = useState("");
-  const [recurrent, setRecurrent] = useState(false);
-  const handleChange = () => {
-    setRecurrent(!recurrent);
-  };
+  const [date, setDate] = useState(new Date());
   const log = (event) => {
     event.preventDefault();
-    console.log(task, recurrent);
   };
 
   return (
@@ -31,14 +29,12 @@ const AddForm = () => {
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         />
-        <div className="flex">
-          <input
-            type="checkbox"
-            className="mr-4"
-            checked={recurrent}
-            onChange={handleChange}
+        <div className="flex justify-center items-center">
+          <Calendar
+            className={"bg-white w-full text-black rounded"}
+            onChange={setDate}
+            value={date}
           />
-          <h4>Recurrent</h4>
         </div>
         <div className="flex justify-center items-center mt-4">
           <button
